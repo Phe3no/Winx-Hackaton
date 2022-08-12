@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Note!! this is the css file for this page-------------------->
+    <link rel="stylesheet" href="css/sign-in.css" />
+    <title>Sign-in</title>
+  </head>
+  <body>
+    <form class="sign-in" name="contact" method="POST" data-netlify="true">
+      <h4>Please fill in the form below.</h4>
+      <div class="sign-in-group">
+        <label for="">Name</label>
+        <input name="naam" type="text" /> <br />
+      </div>
+      <div class="sign-in-group">
+        <label for="">Email</label>
+        <input name="email" type="email" /> <br />
+      </div>
+      <div class="sign-in-group">
+        <label for="">Telephone</label>
+        <input name="telefoon" type="tel" /> <br />
+      </div>
+      <div class="sign-in-group">
+        <label for="">Age</label>
+        <input name="leeftijd" type="number" /> <br />
+      </div>
+      <div class="sign-in-group">
+        <label for="">Date of birth</label>
+        <input name="geboortedatum" type="date" /> <br />
+      </div>
+      <div class="sign-in-group">
+        <label for=""
+          >What is your gender, of course you may always change later.
+        </label>
+        <input name="gender" type="radio" />Male
+        <input name="gender" type="radio" />Female
+        <input name="gender" type="radio" />Other <br />
+      </div>
+      <div class="sign-in-group">
+        <label for="">
+          Which of the folowing coding languages suites you. (You can choose
+          more than one.)</label
+        >
+        <input type="checkbox" />Java <input type="checkbox" />JavaScript
+        <input type="checkbox" />Python <input type="checkbox" />PHP <br />
+      </div>
+      <div class="sign-in-group">
+        <label for="">What is your favorite website background-color</label>
+        <input name="kleur" type="color" /> <br />
+      </div>
+      <div class="sign-in-group">
+        <textarea
+          name="You're code"
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Your code here..."
+        ></textarea>
+        <br />
+      </div>
+      <div class="sign-in-group">
+        <label for="">Send some code in a file.txt from your computer</label>
+        <input name="bestand" type="file" placeholder="" /> <br />
+      </div>
+      <div class="sign-in-group">
+        <label for="">Favorite code-learning website</label>
+        <input name="favorietewebsite" type="url" list="" /> <br />
+      </div>
+      <div class="sign-in-group">
+        <input type="reset" />
+        <input type="submit" />
+      </div>
+      <div class="sign-in-group">
+        <a href="index.html">Homepage</a>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,351 @@
+/*HTML/BODY/*------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #eee;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-wrapper {
+  height: 100%;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 100px 750px auto 300px;
+  grid-template-areas:
+    "h h h h h h h h" /*h for header-area*/
+    "b b b b b b b b" /*b for banner-area*/
+    "m m m m m m m m" /*m for main-area*/
+    "f f f f f f f f" /*f for footer-area*/;
+}
+
+@media only screen and (min-width: 500px) {
+  .page-wrapper {
+    grid-template-rows: 100px 540px auto 250px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .page-wrapper {
+    grid-template-rows: 100px 480px auto 250px;
+  }
+}
+
+/*HEADER--------------------------------------------------------*/
+
+.header-area {
+  grid-area: h;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.header-area .organisation-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header-area .organisation-navbar .header-organisation {
+  width: 160px;
+  height: 60px;
+  padding: 4px 15px;
+  /* nu centeren
+   *op y-as: (100px hoogte navbar -  60px div hoogte) / 2
+   *op x-as: (100% schermbreedte / 2)  - (helft div-breedte) - 2 * 15px padding
+   */
+  margin: 20px calc((100vw / 2) - (160px / 2) - 30px);
+}
+
+.header-area .organisation-navbar .header-organisation h3 {
+  color: #444;
+  font-family: Catamaran;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 10px;
+  line-height: 0.8em;
+}
+
+.header-area .organisation-navbar .header-organisation p {
+  color: #444;
+  font-family: Catamaran;
+  font-size: 14px;
+  text-align: center;
+}
+
+.header-area .organisation-navbar nav {
+  line-height: 100px;
+}
+
+.header-area .organisation-navbar nav ul {
+  display: none;
+}
+
+.header-area .organisation-navbar nav ul li {
+  padding: 0 15px;
+}
+
+.header-area .organisation-navbar nav ul li a {
+  background-color: #444;
+  color: #f4f4f4;
+  padding: 8px 12px;
+}
+
+.header-area .organisation-navbar nav ul li a:hover {
+  background-color: #f4f4f4;
+  color: #444;
+  border: 1px solid #444;
+  padding: 8px 12px;
+}
+
+.header-area > a {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  .header-area .organisation-navbar .header-organisation {
+    margin: 20px 0;
+    border-right: 3px solid #444;
+  }
+
+  .header-area .organisation-navbar nav ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+  }
+
+  .header-area > a {
+    display: block;
+    color: #444;
+    padding: 4px 8px;
+    margin: 27px 100px 27px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 40px;
+    border: 1px solid #444;
+  }
+}
+
+/*BANNER-------------------------------------------------------*/
+.banner-area {
+  grid-area: b;
+  width: 100%;
+  background-image: url("../images/in-action.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+
+.banner-text > h2 {
+  font-family: Catamaran;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.2em;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 2px 2px 8px #111;
+  padding: 80px 0 100px 0;
+}
+
+.banner-text > h1 {
+  font-family: Catamaran; /*Cormorant Garamond;*/
+  font-size: 32px;
+  font-weight: 900;
+  /*font-style: italic;*/
+  color: #f4f4f4;
+  text-align: center;
+  text-shadow: 2px 2px 8px #444;
+  line-height: 40px;
+}
+
+/*MAIN------------------------------------------------------------*/
+.main-area {
+  grid-area: m;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-area .main-links div {
+  width: 100% - 15px;
+  height: 100px;
+  margin: 0 15px 15px;
+  border: 1px solid #444;
+}
+
+.main-area .main-links a div h3 {
+  font-family: Catamaran;
+  font-size: 28px;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+  line-height: 100px;
+}
+
+@media only screen and (min-width: 500px) {
+  .main-links {
+    width: 100vw;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  .main-area .main-links {
+    width: 100%;
+  }
+
+  .main-area .main-links a {
+    margin: 10px 10px;
+  }
+
+  .main-area .main-links a div {
+    margin: 0;
+    height: 230px;
+  }
+
+  .main-area .main-links a .sign-in-link {
+    height: 100px;
+  }
+
+  .square-link {
+    width: calc(50% - 20px); /*25 % - 2x margin side*/
+  }
+
+  .rectangle-link {
+    width: calc(100% - 20px);
+  }
+
+  .html-link {
+    background-image: url("../images/html5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .html-link h3 {
+    display: none;
+  }
+
+  .css-link {
+    background-image: url("../images/css3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .css-link h3 {
+    display: none;
+  }
+
+  .javascript-link {
+    background-image: url("../images/javascript.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .javascript-link h3 {
+    display: none;
+  }
+  .python-link {
+    background-image: url("../images/python.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .python-link h3 {
+    display: none;
+  }
+
+  .studies-link {
+    background-image: url("../images/OU-WINC-Academy.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .want-to-knows-link {
+    background-image: url("../images/spring-php.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .main-links {
+    max-width: 1000px;
+  }
+
+  .square-link {
+    width: calc(25% - 20px); /*25 % - 2x margin side*/
+  }
+
+  .rectangle-link {
+    width: calc(50% - 20px);
+  }
+
+  .sign-in-link {
+    display: none;
+  }
+}
+
+/*FOOTER------------------------------------------------------------*/
+
+.footer-area {
+  grid-area: f;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  justify-content: center;
+  background-color: #444;
+}
+
+.footer-area ul {
+  list-style: disc inside;
+}
+
+.footer-links {
+  color: #f4f4f4;
+}
+
+.footer-links h5 {
+  font-size: 18px;
+  padding: 20px 0 10px;
+}
+
+.footer-links p {
+  display: inline;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 500px) {
+  .footer-area {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .footer-area {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+}

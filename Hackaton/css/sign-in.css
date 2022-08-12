@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+}
+
+.sign-in {
+  padding: 15px;
+  width: 100%;
+  margin: 30px auto;
+  border: 1px solid #444;
+  background-color: #999;
+  font-size: 16px;
+}
+
+.sign-in .sign-in-group {
+  padding: 8px 8px;
+}
+
+.sign-in h4 {
+  font-size: 1.4em;
+}
+
+.sign-in label {
+  display: block;
+  padding-bottom: 5px;
+}
+
+.sign-in input {
+  font-size: 16px;
+  padding-left: 8px;
+  padding-right: 8px; /*mainly for the input[type-color]*/
+}
+
+.sign-in input[type="text"],
+.sign-in input[type="email"],
+.sign-in input[type="file"],
+.sign-in input[type="url"] {
+  width: 80%;
+  height: 36px;
+}
+
+.sign-in input[type="tel"],
+.sign-in input[type="date"],
+.sign-in input[type="number"],
+.sign-in input[type="color"] {
+  width: 50%;
+  height: 36px;
+}
+
+.sign-in textarea {
+  font-size: 16px;
+  padding: 8px;
+  width: 80%;
+  height: 100px;
+}
+
+.sign-in input[type="reset"] {
+  background-color: #777;
+  color: #f4f4f4;
+  padding: 10px 0;
+  margin-bottom: 5px;
+  width: 160px;
+}
+.sign-in input[type="submit"] {
+  background-color: #444;
+  color: #f4f4f4;
+  padding: 10px 0;
+  width: 160px;
+}
+
+.sign-in a {
+  text-align: right;
+  background-color: #444;
+  color: #f4f4f4;
+  padding: 10px 44px;
+  border: 1px solid #444;
+  text-decoration: none;
+}
+
+.sign-in a:hover {
+  background-color: #f4f4f4;
+  color: #444;
+}
+
+@media only screen and (min-width: 400px) {
+  .sign-in {
+    width: 60%;
+  }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Media Queries</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;900&family=Cormorant+Garamond:wght@300&family=Tapestry&display=swap"
+      rel="stylesheet"
+    />
+    <!--stylesheet for the header and footersections of the subpages as used for the index.html-->
+    <link rel="stylesheet" href="../../css/style.css" />
+    <!--stylesheet for the banner and main sections of this page-->
+    <link rel="stylesheet" href="css/css-style.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="header-area">
+        <div class="organisation-navbar">
+          <div class="header-organisation">
+            <h3>eastrend</h3>
+            <p>web-development</p>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="css-grid.html">Portfolio</a></li>
+              <li><a href="css-grid.html">About me</a></li>
+              <li><a href="css-grid.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <a href="sign-vin.html" class="header-signin">Sign-in</a>
+      </header>
+
+      <section class="banner-area">
+        <div class="banner-text">
+          <h2>
+            this website for me, functions as a notebook <br />
+            in which i make notes during the <br />
+            full-stack web developer training at WINC academy <br />
+            media queries are all about responsive webdesign...
+          </h2>
+          <h1>
+            For now, all the links in the homepage connect to the CSS-Grid-page,
+            with the exception of the home- and sign-in buttons
+          </h1>
+        </div>
+      </section>
+
+      <main class="main-area">
+        <section class="main-area-css">
+          <aside class="sidebar">
+            <h2>Table of contents</h2>
+            <p>Click on any link below...</p>
+            <ul>
+              <li><a href="css-grid.html">CSS Grid</a></li>
+              <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+              <li><a href="css-media-queries.html">CSS Media Queries</a></li>
+              <li><a href="more.html">More ?</a></li>
+              <li><a href="../../index.html">Homepage</a></li>
+            </ul>
+          </aside>
+
+          <div class="title">
+            <h2>CSS Media Queries</h2>
+          </div>
+          <div class="image">
+            <figure>
+              <img
+                src="images/css-media-queries.jpg"
+                alt="Picture showing a piece of code needed to represent this page."
+              />
+              <figcaption>Media Queries in action...</figcaption>
+            </figure>
+          </div>
+          <article class="article">
+            <h2>Notes</h2>
+            <code
+              >@media only screen and (min-width: 500px) { <br />
+              }
+            </code>
+            <p>
+              defines in this case, that the screen-with of the used device must
+              be at least 500px wide, to execute the code within the curly
+              bracers.
+            </p>
+            <code
+              >media only screen and (min-width: 1000px) { <br />
+              }</code
+            >
+            <p>
+              overrides the earlier code whenever (for-example) the below code
+              is being written between the curly braces
+            </p>
+            <code>html {</code>
+            <code>background-color: blue;</code>
+            <code>}</code>
+            <p>
+              the background of the html-element would turn to blue, whenever a
+              screen-device would have a width of at least a 1000 pixels.
+            </p>
+            <p>
+              But of cource this will be overwritten whenever the
+              html-background-color is set with an other value, after the last
+              above statement.
+            </p>
+            <h2>More ?</h2>
+            <p>
+              As soon as I have learned if a media-querie for a specifically
+              width, only is used ones in a css/file.css.
+            </p>
+            <p>
+              For some reason I like to use them at headers, and again at
+              banners, main-tags and footers That's my way of keeping things
+              organised. But of course I like to learn what is best practice...
+            </p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer-area">
+        <ul class="footer-links completed-studies">
+          <h5>Completed courses</h5>
+          <li><p>OU Object Oriented Programming in Java</p></li>
+          <li>
+            <p>OU Relational Databases</p>
+            <p></p>
+          </li>
+        </ul>
+        <ul class="footer-links studies-taken">
+          <h5>Courses I'm activily working on</h5>
+          <li><p>WINC Academy - Full-stack Web Development</p></li>
+          <li><p>OU - Advanced Object Oriented Programming in Java</p></li>
+          <li><p>OU - Computer Networks</p></li>
+          <li><p>OU - Logic, Collections and Relations</p></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+/*BANNER-AREA---------------------------------------------*/
+.banner-area {
+  background: none;
+  background-color: #444;
+}
+
+/*overrides root  /css/style.css */
+.banner-text > h2 {
+  font-size: 28px;
+}
+
+.banner-text > h1 {
+  font-size: 20px;
+}
+
+/*MAIN_AREA-------------------------------------------------*/
+.main-area-css {
+  font-family: Catamaran;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto 100px auto auto;
+  grid-template-areas:
+    "s s s s s s s s"
+    "t t t t t t t t"
+    "i i i i i i i i"
+    "a a a a a a a a ";
+}
+
+@media only screen and (min-width: 1000px) {
+  .main-area-css {
+    grid-template-rows: 100px auto auto;
+    grid-template-areas:
+      "s s t t t t t t"
+      "s s i i i i i i"
+      "s s a a a a a a ";
+  }
+}
+/*MAIN-AREA SIDEBAR--------------------------------------------------------------------*/
+.sidebar {
+  grid-area: s;
+  background-color: #888;
+  padding: 8px;
+}
+
+.sidebar h2 {
+  color: #444;
+}
+
+.sidebar p {
+  color: #444;
+}
+
+.sidebar ul li a {
+  display: block;
+  background-color: #444;
+  padding: 4px 4px;
+  margin: 4px 0;
+  color: #f4f4f4;
+}
+
+.sidebar ul li a:hover {
+  background-color: #666;
+}
+
+/*MAIN-AREA TITLE----------------------------------------------------------------------*/
+.title {
+  grid-area: t;
+  border: 1px solid #888;
+}
+
+.title h2 {
+  color: #444;
+  line-height: 100px;
+  font-size: 32px;
+  text-align: center;
+}
+
+/*MAIN-AREA IMAGE----------------------------------------------------------------------*/
+.image {
+  grid-area: i;
+}
+
+.image figure {
+  width: 100%;
+  overflow-x: scroll;
+  border: 1px solid #444;
+}
+
+.image figure img {
+  width: 150%;
+}
+
+.image figure figcaption {
+  background-color: #f4f4f4;
+  color: #444;
+  padding: 4px;
+}
+
+/*MAIN-AREA ARTICLE--------------------------------------------------------------------*/
+
+.article {
+  grid-area: a;
+  border: 1px solid #888;
+  padding: 10px;
+  color: #444;
+}
+
+.article > p {
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+.article code {
+  display: block;
+  color: orangered;
+  padding-left: 8px;
+}
+
+/*MORE-CSS ------------------------------------------------------------------------------*/
+
+.max-size {
+  padding: 15% 0;
+}
+
+.max-size h3 {
+  text-align: center;
+  color: red;
+  font-size: 80px;
+}
+
+.max-size p {
+  text-align: center;
+  color: #444;
+  font-size: 50px;
+  padding: 20px 0;
+}
+
+.max-size a {
+  float: right;
+  background-color: #444;
+  padding: 10px 35px;
+  margin-right: 50px;
+  color: #f4f4f4;
+}
